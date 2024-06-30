@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function firstFunction() {
+            alert('First function executed');
+        }
+
+        function secondFunction() {
+            alert('Second function executed');
+        }
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            emailjs.init('BK27Otp71kgHbeNb1'); // Replace with your actual User ID
+        });
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+    <button onclick="firstFunction(); secondFunction();">Click Me</button>
+    
+    <script src="index.js"></script>
+</body>
+</html>
